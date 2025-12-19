@@ -1,0 +1,248 @@
+.module-page {
+  width: 100%;
+}
+
+.module-header-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 0;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  min-height: 44px;
+}
+
+.back-button:hover, .back-button:focus {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-3px);
+}
+
+.module-title-section h1 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.module-intro {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.module-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.lessons-sidebar {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.lessons-sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #667eea;
+  font-size: 1.3rem;
+}
+
+.lessons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lessons-list li {
+  margin-bottom: 0.5rem;
+}
+
+.lesson-button {
+  width: 100%;
+  background: none;
+  border: 2px solid #e0e0e0;
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+}
+
+.lesson-button:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+  transform: translateX(3px);
+}
+
+.lesson-button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  font-weight: 600;
+}
+
+.lesson-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  gap: 1rem;
+}
+
+.lesson-header h2 {
+  margin: 0;
+  color: #667eea;
+}
+
+.formula-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Monaco', monospace;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lesson-section {
+  margin-bottom: 2.5rem;
+}
+
+.lesson-section h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.syntax-box, .example-box {
+  background: #f5f5f5;
+  border-left: 4px solid #667eea;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+.syntax-box code, .example-box code {
+  background: none;
+  color: #d63384;
+  padding: 0;
+}
+
+.mistakes-list {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.mistakes-list li {
+  margin-bottom: 0.75rem;
+  color: #856404;
+}
+
+.mistakes-list li:last-child {
+  margin-bottom: 0;
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.nav-button {
+  flex: 1;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.nav-button:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .module-content {
+    grid-template-columns: 1fr;
+  }
+
+  .lessons-sidebar {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-header-section {
+    padding: 1rem;
+  }
+
+  .module-content {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .lesson-content {
+    padding: 1rem;
+  }
+
+  .lesson-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formula-badge {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lesson-actions {
+    flex-direction: column;
+  }
+
+  .lessons-sidebar {
+    position: relative;
+    top: auto;
+  }
+}

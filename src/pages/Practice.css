@@ -1,0 +1,91 @@
+.practice-page {
+  width: 100%;
+}
+
+.practice-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.practice-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.practice-header p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.practice-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  min-height: auto;
+  position: relative;
+  bottom: -2px;
+}
+
+.tab-button:hover {
+  color: #667eea;
+  transform: none;
+}
+
+.tab-button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: -3px;
+}
+
+[role="tabpanel"] {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .practice-header {
+    padding: 2rem 1rem;
+  }
+
+  .practice-container {
+    padding: 0 1rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+}

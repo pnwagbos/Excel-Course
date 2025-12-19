@@ -1,0 +1,12 @@
+.footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
